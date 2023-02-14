@@ -1,6 +1,7 @@
 <script lang="ts">
   import svelteLogo from './assets/svelte.svg'
   import Await from './lib/Await.svelte';
+  import Bind from './lib/Bind.svelte';
   import Condition from './lib/Condition.svelte';
   import Counter from './lib/Counter.svelte'
   import Each from './lib/Each.svelte';
@@ -20,13 +21,13 @@
   <h1>Vite + Svelte</h1>
 
   <div class="card">
-    <Await />
     <Counter />
     <Condition />
     <Each />
     <Event />
     <Emit on:finish={(param) => { console.log('param', param)}} />
     <Await />
+    <Bind />
   </div>
 
   <p>
