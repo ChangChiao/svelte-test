@@ -7,6 +7,7 @@
   import Each from './lib/Each.svelte';
   import Emit from './lib/Emit.svelte';
   import Event from './lib/Event.svelte';
+  import LifeCycle from './lib/LifeCycle.svelte';
 </script>
 
 <main>
@@ -28,6 +29,7 @@
     <Emit on:finish={(param) => { console.log('param', param)}} />
     <Await />
     <Bind />
+    <LifeCycle />
   </div>
 
   <p>
