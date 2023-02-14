@@ -1,6 +1,10 @@
 <script lang="ts">
   import svelteLogo from './assets/svelte.svg'
+  import Condition from './lib/Condition.svelte';
   import Counter from './lib/Counter.svelte'
+  import Each from './lib/Each.svelte';
+  import Emit from './lib/Emit.svelte';
+  import Event from './lib/Event.svelte';
 </script>
 
 <main>
@@ -16,6 +20,11 @@
 
   <div class="card">
     <Counter />
+    <Condition />
+    <Each />
+    <Event />
+    <Emit on:finish={(param) => { console.log('param', param);
+    }} />
   </div>
 
   <p>
