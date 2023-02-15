@@ -8,6 +8,8 @@
   import Emit from './lib/Emit.svelte';
   import Event from './lib/Event.svelte';
   import LifeCycle from './lib/LifeCycle.svelte';
+  import Rxjs from './lib/Rxjs.svelte';
+  import Store from './lib/Store.svelte';
 </script>
 
 <main>
@@ -30,6 +32,8 @@
     <Await />
     <Bind />
     <LifeCycle />
+    <Store />
+    <Rxjs />
   </div>
 
   <p>

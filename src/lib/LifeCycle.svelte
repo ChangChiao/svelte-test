@@ -1,7 +1,5 @@
 <script>
-  import { beforeUpdate, onDestroy, onMount } from "svelte";
-  import { afterUpdate } from "svelte/types/runtime/internal/lifecycle";
-
+  import { beforeUpdate, afterUpdate, onDestroy, onMount } from "svelte";
   let timer = null;
   //初始化時update, 狀態更新後，元件更新前執行
   beforeUpdate(() => {
@@ -25,4 +23,4 @@
   });
 </script>
 
-<div />
+<div>lifecycle</div>
