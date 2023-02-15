@@ -8,6 +8,7 @@
   import Emit from './lib/Emit.svelte';
   import Event from './lib/Event.svelte';
   import LifeCycle from './lib/LifeCycle.svelte';
+  import Motion from './lib/Motion.svelte';
   import Rxjs from './lib/Rxjs.svelte';
   import Store from './lib/Store.svelte';
 </script>
@@ -34,6 +35,7 @@
     <LifeCycle />
     <Store />
     <Rxjs />
+    <Motion />
   </div>
 
   <p>
