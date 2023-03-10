@@ -3,7 +3,7 @@
 </script>
 
 <p>
-{#each arr as num}
-  <span>{num}</span>
+{#each arr as num, index}
+  <span>{index} - {num}</span>
 {/each}
 </p>

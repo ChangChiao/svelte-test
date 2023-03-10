@@ -12,6 +12,7 @@
   import Rxjs from './lib/Rxjs.svelte';
   import Store from './lib/Store.svelte';
   import Twind from './lib/Twind.svelte';
+  import Felte from './lib/Felte.svelte';
 </script>
 
 <main>
@@ -26,6 +27,7 @@
   <h1>Vite + Svelte</h1>
 
   <div class="card">
+    <Felte />
     <Twind />
     <Counter />
     <Condition />

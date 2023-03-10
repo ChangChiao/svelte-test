@@ -19,7 +19,10 @@
     "vite": "^4.1.0"
   },
   "dependencies": {
+    "@felte/validator-zod": "^1.0.13",
+    "felte": "^1.2.7",
     "rxjs": "^7.8.0",
-    "twind": "^0.16.19"
+    "twind": "^0.16.19",
+    "zod": "^3.21.4"
   }
 }
