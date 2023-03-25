@@ -30,7 +30,7 @@
   <h1>Vite + Svelte</h1>
 
 <div class="card">
-  <FelteTest />
+  <!-- <FelteTest /> -->
   <ConditionFelte />
     <AdvancedFelte />
     <Felte />

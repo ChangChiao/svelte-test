@@ -54,7 +54,6 @@
 </script>
 
 Condition
-{$errors}
 <form use:form>
   <select
     bind:value={$data.isPresent}
@@ -66,9 +65,9 @@ Condition
   {#if $errors.isPresent}
     <p>{$errors?.isPresent[0]}</p>
   {/if}
-  <h1>{$data.isPresent}</h1>
   {#if $data.isPresent === "b"}
-    <input type="text" value={$data.person} />
+  <h1>{$data.person}</h1>
+    <input type="number" bind:value={$data.person} />
     {#if 'person' in $errors && $errors.person}
       <p>{$errors?.person[0]}</p>
     {/if}
