@@ -1,39 +1,49 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import Await from './lib/Await.svelte';
-  import Bind from './lib/Bind.svelte';
-  import Condition from './lib/Condition.svelte';
-  import Counter from './lib/Counter.svelte'
-  import Each from './lib/Each.svelte';
-  import Emit from './lib/Emit.svelte';
-  import Event from './lib/Event.svelte';
-  import LifeCycle from './lib/LifeCycle.svelte';
-  import Motion from './lib/Motion.svelte';
-  import Rxjs from './lib/Rxjs.svelte';
-  import Store from './lib/Store.svelte';
-  import Twind from './lib/Twind.svelte';
-  import Felte from './lib/Felte.svelte';
+  import svelteLogo from "./assets/svelte.svg";
+  import Await from "./lib/Await.svelte";
+  import Bind from "./lib/Bind.svelte";
+  import Condition from "./lib/Condition.svelte";
+  import Counter from "./lib/Counter.svelte";
+  import Each from "./lib/Each.svelte";
+  import Emit from "./lib/Emit.svelte";
+  import Event from "./lib/Event.svelte";
+  import LifeCycle from "./lib/LifeCycle.svelte";
+  import Motion from "./lib/Motion.svelte";
+  import Rxjs from "./lib/Rxjs.svelte";
+  import Store from "./lib/Store.svelte";
+  import Twind from "./lib/Twind.svelte";
+  import Felte from "./lib/Felte.svelte";
+  import ConditionFelte from "./lib/ConditionFelte.svelte";
+  import AdvancedFelte from "./lib/AdvancedFelte.svelte";
+  import FelteTest from "./lib/FelteTest.svelte";
 </script>
 
 <main>
   <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer"> 
+    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
       <img src="/vite.svg" class="logo" alt="Vite Logo" />
     </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer"> 
+    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </a>
   </div>
   <h1>Vite + Svelte</h1>
 
-  <div class="card">
+<div class="card">
+  <FelteTest />
+  <ConditionFelte />
+    <AdvancedFelte />
     <Felte />
     <Twind />
     <Counter />
     <Condition />
     <Each />
     <Event />
-    <Emit on:finish={(param) => { console.log('param', param)}} />
+    <Emit
+      on:finish={(param) => {
+        console.log("param", param);
+      }}
+    />
     <Await />
     <Bind />
     <LifeCycle />
@@ -43,12 +53,14 @@
   </div>
 
   <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
+    Check out <a
+      href="https://github.com/sveltejs/kit#readme"
+      target="_blank"
+      rel="noreferrer">SvelteKit</a
+    >, the official Svelte app framework powered by Vite!
   </p>
 
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p>
 </main>
 
 <style>
