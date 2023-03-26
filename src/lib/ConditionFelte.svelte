@@ -2,6 +2,8 @@
   import { z } from "zod";
   import { validator } from "@felte/validator-zod";
   import { createForm } from "felte";
+  import { tw } from "twind";
+  import { onMount } from "svelte";
   let defaultValues = {
     isPresent: "a",
     person: 0,
@@ -26,9 +28,9 @@
   ]);
 
   type Schema = z.infer<typeof schema> 
-
+  $: console.log('erros', $errors);
     
-  const { form, errors, data, addField, isDirty, isValid } = createForm<
+  const { form, errors, data, addField, isDirty, isValid, validate } = createForm<
     z.infer<typeof schema>
   >({
     initialValues: { ...defaultValues },
@@ -51,6 +53,10 @@
       console.log(values, "values");
     },
   });
+
+  onMount(() => {
+    validate(); //馬上validate
+  })
 </script>
 
 Condition
@@ -69,7 +75,7 @@ Condition
   <h1>{$data.person}</h1>
     <input type="number" bind:value={$data.person} />
     {#if 'person' in $errors && $errors.person}
-      <p>{$errors?.person[0]}</p>
+      <p class={tw('text-red-300')}>{$errors?.person[0]}</p>
     {/if}
   {/if}
   <button type="submit">submit</button>
